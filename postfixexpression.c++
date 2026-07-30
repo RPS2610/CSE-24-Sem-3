@@ -26,25 +26,25 @@ int evaluatePostfix(string exp)
 
             switch (token[0])
             {
-                case '+':
-                    st.push(val1 + val2);
-                    break;
+            case '+':
+                st.push(val1 + val2);
+                break;
 
-                case '-':
-                    st.push(val1 - val2);
-                    break;
+            case '-':
+                st.push(val1 - val2);
+                break;
 
-                case '*':
-                    st.push(val1 * val2);
-                    break;
+            case '*':
+                st.push(val1 * val2);
+                break;
 
-                case '/':
-                    st.push(val1 / val2);
-                    break;
+            case '/':
+                st.push(val1 / val2);
+                break;
 
-                case '%':
-                    st.push(val1 % val2);
-                    break;
+            case '%':
+                st.push(val1 % val2);
+                break;
             }
         }
     }
