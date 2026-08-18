@@ -9,7 +9,6 @@ private:
     int size;
 
 public:
-    // Constructor
     CircularQueue(int s)
     {
         size = s;
@@ -19,17 +18,14 @@ public:
         rear = -1;
     }
 
-    // Enqueue operation
     void enqueue(int value)
     {
-        // Queue is full
         if ((rear + 1) % size == front)
         {
             cout << "Queue is Full!" << endl;
             return;
         }
 
-        // First element
         if (front == -1)
         {
             front = 0;
@@ -45,10 +41,9 @@ public:
         cout << value << " inserted into queue." << endl;
     }
 
-    // Dequeue operation
     void dequeue()
     {
-        // Queue is empty
+
         if (front == -1)
         {
             cout << "Queue is Empty!" << endl;
@@ -57,7 +52,6 @@ public:
 
         cout << queue[front] << " deleted from queue." << endl;
 
-        // Only one element
         if (front == rear)
         {
             front = -1;
@@ -69,7 +63,6 @@ public:
         }
     }
 
-    // Display operation
     void display()
     {
         if (front == -1)
@@ -95,7 +88,6 @@ public:
         cout << endl;
     }
 
-    // Destructor
     ~CircularQueue()
     {
         delete[] queue;
